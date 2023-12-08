@@ -1,28 +1,33 @@
 ---
+import Title from './Title.astro';
 const skills = [
-  'proven international experience with top results and a deep cultural understanding unmatched by machine translation or AI',
-  'competitive rates, quick deliveries and utmost care for data protection',
-  'ability to adapt content to different targets in both Europe and the Americas',
-  'a solid network of consultants, editors, software engineers and field experts',
-  'assistance in content creation including planning, cultural adaptation, quality assurance, etc.',
+  'Proven international experience with top results and a deep cultural understanding unmatched by machine translation or AI',
+  'Competitive rates, quick deliveries and utmost care for data protection',
+  'Ability to adapt content to different targets in both Europe and the Americas',
+  'A solid network of consultants, editors, software engineers and field experts',
+  'Assistance in content creation including planning, cultural adaptation, quality assurance, etc.',
 ];
 ---
 
-<ul role="list" class="mt-6 space-y-6">
-  {
-    skills.map((skill) => (
-      <li class="flex gap-3">
-        <svg
-          class="h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" />
-        </svg>
-        <span>{skill}</span>
-      </li>
-    ))
-  }
-</ul>
+<div>
+  <Title>Skills</Title>
+
+  <ul role="list" class="mt-6 space-y-8">
+    {
+      skills.map((skill) => (
+        <li class="flex gap-3">
+          <svg
+            class="h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" />
+          </svg>
+          <span>{skill}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
