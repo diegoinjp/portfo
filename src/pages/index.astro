@@ -1,19 +1,16 @@
 ---
 import Skills from '../components/Skills.astro';
 import ContactForm from '../components/contact/ContactForm.astro';
-import ContactInfo from '../components/contact/ContactInfo.astro';
 import About from '../components/home/About.astro';
 import Expertise from '../components/home/Expertise.astro';
 import Hero from '../components/home/Hero.astro';
 import Services from '../components/home/Services.astro';
 import Testimonials from '../components/home/Testimonials.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout
-  description="Stone is a premium Astro theme specially designed for Business, Marketing, SaaS and Startup websites."
-  title="Stone · Premium Astro template"
->
+<Layout description={SITE_DESCRIPTION} title={SITE_TITLE}>
   <Hero />
   <Services />
   <Skills />
