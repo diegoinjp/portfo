@@ -7,16 +7,14 @@ import Stats from './Stats.astro';
   <Title styles="mb-6">Profile</Title>
   <div class="flex flex-col gap-12">
     <div class="grid gap-12 lg:grid-cols-3 lg:gap-12">
-      <div>
         <!-- placeholder image -->
         <img
           class="hidden rounded-lg object-cover object-center shadow-lg lg:block"
-          src="https://picsum.photos/id/10/500/700"
+          src="profile1.webp"
           alt="placeholder"
           width="500"
           height="700"
         />
-      </div>
       <div class="flex flex-col items-start gap-8 sm:gap-10 lg:col-span-2">
         <p class="text-primary-950/70 dark:text-primary-200/70 sm:text-lg lg:text-justify">
           Born in Argentina in 1989 and resident in Japan since 2017, I am a certified translator
@@ -32,12 +30,6 @@ import Stats from './Stats.astro';
           goal is to deliver high-quality content that not only meets clients’ needs but also
           provides impactful, satisfying experiences.
         </p>
-        <!-- <a
-          href="/about"
-          class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
-        >
-          Read about us
-        </a> -->
       </div>
     </div>
     <Stats />
