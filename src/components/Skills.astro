@@ -22,7 +22,7 @@ const skills: SkillType[] = [
   },
   {
     text: 'A solid network of consultants, editors, software engineers and field experts',
-    icon: 'emojione:globe-with-meridians',
+    icon: 'emojione:light-bulb',
   },
   {
     text: 'Assistance in content creation including planning, cultural adaptation, quality assurance, etc.',
@@ -34,10 +34,10 @@ const skills: SkillType[] = [
 <div>
   <Title>Why choose me</Title>
 
-  <ul role="list" class="mt-6 space-y-8 px-6">
+  <ul role="list" class="mt-6 space-y-8 px-4">
     {
       skills.map((skill) => (
-        <li class="flex gap-6">
+        <li class="flex gap-6 text-lg">
           <svg
             class="h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400"
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const skills: SkillType[] = [
             fill="skyblue"
             aria-hidden="true"
           >
-            <Icon name={skill.icon} class="h-10 w-10" />
+            <Icon name={skill.icon} class="h-12 w-12" />
           </svg>
           <span>{skill.text}</span>
         </li>
