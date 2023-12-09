@@ -1,10 +1,9 @@
 ---
 import Skills from '../components/Skills.astro';
 import ContactForm from '../components/contact/ContactForm.astro';
-import About from '../components/home/About.astro';
+import Profile from '../components/home/Profile.astro';
 import Expertise from '../components/home/Expertise.astro';
 import Hero from '../components/home/Hero.astro';
-import Services from '../components/home/Services.astro';
 import Testimonials from '../components/home/Testimonials.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import Layout from '../layouts/Layout.astro';
@@ -12,12 +11,10 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout description={SITE_DESCRIPTION} title={SITE_TITLE}>
   <Hero />
-  <Services />
-  <Skills />
-  <About />
+  <Profile />
+  <!-- <Stats /> -->
   <Expertise />
+  <Skills />
   <Testimonials />
-  <!-- <Cta /> -->
-  <!-- <ContactInfo /> -->
   <ContactForm />
 </Layout>

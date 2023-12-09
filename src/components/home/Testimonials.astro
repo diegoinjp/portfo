@@ -1,5 +1,7 @@
 ---
 import Title from '../Title.astro';
+import { Icon } from 'astro-icon';
+
 type TestimonialType = {
   message: string;
   client: string;
@@ -13,55 +15,31 @@ const testimonials: TestimonialType[] = [
     client: 'Direct client based in Mexico',
     score: 5,
     // lorempicsum
-    icon: 'https://picsum.photos/id/237/32',
+    icon: 'emojione:flag-for-mexico',
   },
   {
     message: 'Fast and reliable translator. Great communication!',
     client: 'Outsourcer based in Europe',
     score: 5,
-    icon: 'https://picsum.photos/id/238/32',
+    icon: 'emojione:flag-for-european-union',
   },
   {
     message: 'Very effective, reliable translator. We are pleased to keep working together.',
     client: 'Direct client based in Argentina',
     score: 5,
-    icon: 'https://picsum.photos/id/239/32',
+    icon: 'emojione:flag-for-argentina',
   },
   {
     message: 'Excellent and prompt service!',
     client: 'Outsourcer based in Japan',
     score: 5,
-    icon: 'https://picsum.photos/id/240/32',
-  },
-];
-
-const testimonials2 = [
-  {
-    name: 'Rebecca Hayes',
-    description: 'Designer',
-    image: '/assets/testimonial-1.webp',
-    message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
-  },
-  {
-    name: 'Rosa Spencer',
-    description: 'Team Leader',
-    image: '/assets/testimonial-2.webp',
-    message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
-  },
-  {
-    name: 'Christina Upton',
-    description: 'Manager',
-    image: '/assets/testimonial-3.webp',
-    message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+    icon: 'emojione:flag-for-japan',
   },
 ];
 ---
 
 <div class="flex flex-col items-center gap-12 lg:gap-20">
-  <Title>Testimonials</Title>
+  <Title>Reviews</Title>
   <div
     class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-4 lg:divide-x lg:divide-y-0"
   >
@@ -85,12 +63,9 @@ const testimonials2 = [
             <p>{testimonial.message}</p>
           </blockquote>
           <figcaption class="flex flex-col gap-4">
-            <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.icon} alt="" />
+            <Icon name={testimonial.icon} class="mx-auto h-12 w-12 rounded-full" />
             <div class="text-center">
               <div class="text-base font-medium">{testimonial.client}</div>
-              <div class="text-sm text-primary-950/70 dark:text-primary-200/70">
-                {testimonial.message}
-              </div>
             </div>
           </figcaption>
         </figure>

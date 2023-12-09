@@ -1,11 +1,12 @@
 ---
 import Button from '../Button.astro';
+import Title from '../Title.astro';
 ---
 
 <div class="py-16 sm:py-20" id="contact">
   <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
     <div class="flex flex-col gap-4 sm:gap-6">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Let's work together</h2>
+      <Title>Let's work together!</Title>
       <p class="max-w-lg text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
         Have a project you'd like to discuss? I'd love to hear from you. Send me a message and I'll
         respond as soon as possible.
@@ -51,8 +52,11 @@ import Button from '../Button.astro';
           placeholder="Message"></textarea>
       </div>
 
-      <div>
+      <div class="flex flex-col items-center gap-8 lg:flex-row lg:gap-4">
         <Button>Submit</Button>
+        <span class="text-center text-primary-950/70 dark:text-primary-200/70">
+          This website does not collect any personal data.
+        </span>
       </div>
     </form>
   </div>
