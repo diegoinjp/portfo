@@ -3,13 +3,8 @@ import Icon from 'astro-icon';
 import Button from '../Button.astro';
 ---
 
-<div
-  class="relative mx-auto flex max-w-2xl items-center px-4 sm:px-6 lg:max-w-6xl lg:px-8"
-  style={{
-    height: 'calc(100vh - 104px)',
-  }}
->
-  <div class="flex flex-col-reverse items-center gap-16 lg:my-12 lg:flex-row">
+<div class="h-hero relative mx-auto flex max-w-2xl items-center px-4 sm:px-6 lg:max-w-6xl lg:px-8">
+  <div class="flex flex-col-reverse items-center gap-16 pb-16 lg:my-12 lg:flex-row">
     <div class="flex flex-col items-center gap-8 sm:gap-10 lg:items-start">
       <div class="flex max-w-xl flex-col items-center gap-4 sm:gap-6 lg:items-start">
         <h1
@@ -27,8 +22,10 @@ import Button from '../Button.astro';
     </div>
     <img class="h-auto rounded-3xl lg:w-2/4" src="hero.webp" alt="Hero picture" />
   </div>
-  <Icon
-    name="icon-park-outline:down"
-    class="absolute bottom-0 left-1/2 hidden h-12 w-12 -translate-x-1/2 translate-y-1/2 transform animate-bounce lg:block"
-  />
+  <a href="#profile">
+    <Icon
+      name="icon-park-outline:down"
+      class="absolute bottom-0 left-1/2 hidden h-12 w-12 -translate-x-1/2 translate-y-1/2 transform animate-bounce lg:block"
+    />
+  </a>
 </div>

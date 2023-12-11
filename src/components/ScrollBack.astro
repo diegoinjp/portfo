@@ -3,12 +3,12 @@ import Icon from 'astro-icon';
 ---
 
 <div
-  x-data="{ scrollToTop: () => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, isButtonVisible: false }"
-  x-init="window.addEventListener('scroll', () => { isButtonVisible = window.scrollY > 100; })"
-  class="fixed bottom-6 right-6"
+  x-data="{ isButtonVisible: false }"
+  x-init="window.addEventListener('scroll', () => { isButtonVisible = window.scrollY > 400; })"
+  class="fixed bottom-4 right-4 lg:bottom-6 lg:right-6"
 >
-  <button
-    @click="scrollToTop"
+  <a
+    href="#"
     x-show="isButtonVisible"
     x-transition:enter="transition ease-out duration-300"
     x-transition:enter-start="opacity-0"
@@ -17,6 +17,6 @@ import Icon from 'astro-icon';
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
   >
-    <Icon name="emojione-monotone:up-arrow" class="h-12 w-12 opacity-10 lg:opacity-30" />
-  </button>
+    <Icon name="icons8:up-round" class="h-12 w-12 opacity-20 lg:opacity-30" />
+  </a>
 </div>
