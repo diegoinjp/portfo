@@ -1,7 +1,7 @@
 ---
 const stats = [
   {
-    step: '12+ million',
+    step: '11+ million',
     description: 'words delivered to date, with a continuous flow of projects in the pipeline',
   },
   {
@@ -15,7 +15,7 @@ const stats = [
       'end-clients, including tech giants, world-class manufacturers, web media and public institutions',
   },
   {
-    step: '3000–5000',
+    step: '2500–5000',
     description: 'words translated daily, depending on subject field and format',
   },
 ];
@@ -26,8 +26,8 @@ const stats = [
   <div class="grid gap-8 lg:grid-cols-4">
     {
       stats.map((stat) => (
-        <div class="hover:bg-accent-500/20 dark:hover:bg-accent-400/20 flex flex-col gap-4 rounded-3xl bg-primary-500/10 px-6 py-8 transition-colors duration-300 dark:bg-primary-400/10">
-          <p class=" text-accent-500 dark:text-accent-400 text-center text-4xl">{stat.step}</p>
+        <div class="flex flex-col gap-4 rounded-3xl bg-primary-500/10 px-6 py-8 transition-colors duration-300 hover:bg-accent-500/20 dark:bg-primary-400/10 dark:hover:bg-accent-400/20">
+          <p class=" text-center text-4xl text-accent-500 dark:text-accent-400">{stat.step}</p>
           <div class="flex flex-col gap-4">
             <p class="text-center text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
               {stat.description}

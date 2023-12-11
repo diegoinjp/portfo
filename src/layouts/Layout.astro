@@ -4,6 +4,8 @@ import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import ScrollBack from '../components/ScrollBack.astro';
+import Hero from '../components/home/Hero.astro';
 
 interface Props {
   description: string;
@@ -32,17 +34,20 @@ const { description, title } = Astro.props;
     class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
     <Header />
+    <Hero />
     <main>
-      <div class="py-16 sm:py-20">
-        <div class="mx-auto flex max-w-2xl flex-col gap-40 px-4 sm:px-6 lg:max-w-6xl lg:px-8">
-          <slot />
-        </div>
+      <div class="mx-auto flex max-w-2xl flex-col gap-40 px-4 sm:px-6 lg:max-w-6xl lg:px-8">
+        <slot />
       </div>
+      <ScrollBack />
     </main>
     <!-- <Footer /> -->
     <style is:global>
       [x-cloak] {
         display: none !important;
+      }
+      html {
+        scroll-behavior: smooth;
       }
     </style>
     <script>

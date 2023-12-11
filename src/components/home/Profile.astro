@@ -1,23 +1,27 @@
 ---
 import Title from '../Title.astro';
 import Stats from './Stats.astro';
+import Carousel from '../Carousel';
 ---
 
 <div>
   <Title styles="mb-6">Profile</Title>
   <div class="flex flex-col gap-12">
     <div class="grid gap-12 lg:grid-cols-3 lg:gap-12">
-        <!-- placeholder image -->
-        <img
-          class="hidden rounded-lg object-cover object-center shadow-lg lg:block"
-          src="profile1.webp"
-          alt="placeholder"
-          width="500"
-          height="700"
-        />
+      <!-- placeholder image -->
+      <Carousel client:visible />
       <div class="flex flex-col items-start gap-8 sm:gap-10 lg:col-span-2">
         <p class="text-primary-950/70 dark:text-primary-200/70 sm:text-lg lg:text-justify">
-          Born in Argentina in 1989 and resident in Japan since 2017, I am a certified translator with over ten years of experience and top quality ratings. Drawing from a broad international background, I collaborate with Japanese and global organizations on translation and localization projects. With a passion for cross-cultural communication, I strive to facilitate interactions and promote growth in a variety of markets. <br><br>I specialize in business and digital media, but I am also active in other fields including tourism, marketing, music, education and international cooperation. I use CAT tools such as Trados Studio and Phrase for optimal QA and terminology management. In line with the latest trends in this industry, my goal is to deliver high-quality content that not only meets clients’ needs but also provides impactful, satisfying experiences.
+          Born in Argentina in 1989 and resident in Japan since 2017, I am a certified translator
+          with over ten years of experience and top quality ratings. Drawing from a broad
+          international background, I collaborate with Japanese and global organizations on
+          translation and localization projects. With a passion for cross-cultural communication, I
+          strive to facilitate interactions and promote growth in a variety of markets. <br /><br
+          />I specialize in business and digital media, but I am also active in other fields
+          including tourism, marketing, music, education and international cooperation. I use CAT
+          tools such as Trados Studio and Phrase for optimal QA and terminology management. In line
+          with the latest trends in this industry, my goal is to deliver high-quality content that
+          not only meets clients’ needs but also provides impactful, satisfying experiences.
         </p>
       </div>
     </div>

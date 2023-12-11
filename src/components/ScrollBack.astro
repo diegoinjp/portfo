@@ -1,0 +1,22 @@
+---
+import Icon from 'astro-icon';
+---
+
+<div
+  x-data="{ scrollToTop: () => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, isButtonVisible: false }"
+  x-init="window.addEventListener('scroll', () => { isButtonVisible = window.scrollY > 100; })"
+  class="fixed bottom-6 right-6"
+>
+  <button
+    @click="scrollToTop"
+    x-show="isButtonVisible"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
+    <Icon name="emojione-monotone:up-arrow" class="h-12 w-12 opacity-10 lg:opacity-30" />
+  </button>
+</div>
