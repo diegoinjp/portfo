@@ -1,18 +1,18 @@
 ---
-const services = [
+const stats = [
   {
     step: '12+ million',
-    description: 'words delivered to date',
+    description: 'words delivered to date, with a continuous flow of projects in the pipeline',
   },
   {
     step: '50+',
     description:
-      'agents served, ranging from boutique to major LSPs, and a growing number of direct clients around the world',
+      'agencies served, ranging from boutique to major LSPs, and a growing base of direct clients worldwide',
   },
   {
     step: '500+',
     description:
-      'end-clients, including tech giants, world-class manufacturers, web media and government agencies',
+      'end-clients, including tech giants, world-class manufacturers, web media and public institutions',
   },
   {
     step: '3000–5000',
@@ -25,12 +25,12 @@ const services = [
   <!-- <Title>Stats</Title> -->
   <div class="grid gap-8 lg:grid-cols-4">
     {
-      services.map((service) => (
+      stats.map((stat) => (
         <div class="hover:bg-accent-500/20 dark:hover:bg-accent-400/20 flex flex-col gap-4 rounded-3xl bg-primary-500/10 px-6 py-8 transition-colors duration-300 dark:bg-primary-400/10">
-          <p class=" text-accent-500 dark:text-accent-400 text-center text-4xl">{service.step}</p>
+          <p class=" text-accent-500 dark:text-accent-400 text-center text-4xl">{stat.step}</p>
           <div class="flex flex-col gap-4">
             <p class="text-center text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-              {service.description}
+              {stat.description}
             </p>
           </div>
         </div>

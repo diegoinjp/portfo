@@ -1,35 +1,30 @@
 ---
 import Title from '../Title.astro';
-type FeatureType = {
-  id: string;
+type serviceType = {
   name: string;
   description: string;
 };
 
-const features: FeatureType[] = [
+const services: serviceType[] = [
   {
-    id: 'expertise-1',
-    name: 'Digital Experience Platforms',
+    name: 'Translation',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Focusing primarily on Japanese-to-Spanish and English-to-Spanish translation services, I support international communication with top-quality content. Unlock global opportunities at the best rates!',
   },
   {
-    id: 'expertise-2',
-    name: 'Web & Mobile Development',
+    name: 'Software and media localization',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      '     Working closely with designers and developers, I ensure that app interfaces, video content and other media products are tailored to suit the preferences of users and viewers in Latin America and Europe. Contact me for subtitling and other localization services.',
   },
   {
-    id: 'expertise-3',
-    name: 'Serverless Computing Platforms',
+    name: 'Dubbing and voiceover',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      '     Looking to reach a broader audience with your multimedia projects? Add a Spanish-speaking voice!',
   },
   {
-    id: 'expertise-4',
-    name: 'Build & Test Automation Tools',
+    name: 'Content creation and editing',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "Targeting Latin American and European markets? Let's refine your content for maximum impact. Don't hesitate to reach out.",
   },
 ];
 ---
@@ -42,7 +37,7 @@ const features: FeatureType[] = [
       x-data="{ selected: null, toggle(value) { this.selected = this.selected === value ? null : value } }"
     >
       {
-        features.map((feature, index) => (
+        services.map((service, index) => (
           <div
             class="hover:text-accent-500/80 dark:hover:text-accent-400/80 rounded-3xl px-4 transition"
             x-data={`{ id: ${index}, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }`}
@@ -56,13 +51,13 @@ const features: FeatureType[] = [
               <button
                 type="button"
                 class="group block w-full py-6 text-left transition focus-visible:outline-none"
-                aria-controls={feature.id}
+                aria-controls={`service-${index}`}
                 x-on:click="toggle(id)"
                 aria-expanded="false"
                 x-bind:aria-expanded="isOpen.toString()"
               >
                 <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
-                  <span class="font-medium">{feature.name}</span>
+                  <span class="font-medium">{service.name}</span>
                   <span class="ml-6 flex h-7 items-center">
                     <svg
                       class="h-6 w-6 rotate-0 transform text-primary-600 transition duration-200 ease-in-out dark:text-primary-400"
@@ -78,9 +73,9 @@ const features: FeatureType[] = [
                 </div>
               </button>
             </dt>
-            <dd class="pb-6 pr-6" id={feature.id} x-show="isOpen" x-cloak x-collapse>
+            <dd class="pb-6 pr-6" id={`service-{index}`} x-show="isOpen" x-cloak x-collapse>
               <p class="text-base text-primary-950/70 dark:text-primary-200/70">
-                {feature.description}
+                {service.description}
               </p>
             </dd>
           </div>
