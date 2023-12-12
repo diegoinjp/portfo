@@ -1,7 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 
 function Carousel() {
-  const loopCount = 6
+  const loopCount = 5
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
