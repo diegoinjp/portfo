@@ -5,6 +5,7 @@ export default function Form() {
 
   async function submit(e: SubmitEvent) {
     e.preventDefault();
+    const form = e.target as HTMLFormElement;
     const formData = new FormData(e.target as HTMLFormElement);
     const response = await fetch('/api/sendmail', {
       method: 'POST',
@@ -14,6 +15,7 @@ export default function Form() {
     if (data.message) {
       setResponseMessage(data.message);
     }
+    form.reset();
   }
 
   return (
@@ -71,11 +73,11 @@ export default function Form() {
         <button class="inline-flex items-center justify-center rounded-full border border-transparent bg-accent-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-accent-500 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400">
           SEND
         </button>
-        {/* {responseMessage && (
+        {responseMessage && (
           <span class="text-center text-primary-950/60 dark:text-primary-200/60">
             {responseMessage}
           </span>
-        )} */}
+        )}
         <span class="text-center text-primary-950/60 dark:text-primary-200/60">
           This website does not collect any personal data.
         </span>

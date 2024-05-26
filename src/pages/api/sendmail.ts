@@ -33,7 +33,7 @@ export const POST: APIRoute = async ({ request }): Promise<Response> => {
 
   await client.send({
     from: { email: 'info@demomailtrap.com' },
-    to: [{ email: 'diego.vpda@gmail.com' }],
+    to: [{ email: 'alangazzano@hotmail.com' }],
     subject: 'Notification: ' + subject,
     text,
   });
