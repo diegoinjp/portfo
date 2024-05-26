@@ -16,11 +16,11 @@ const services: serviceType[] = [
     description:
       '     Working closely with designers and developers, I ensure that app interfaces, video content and other media products are tailored to suit the preferences of users and viewers in Latin America and Europe. Contact me for subtitling and other localization services.',
   },
-  {
-    name: 'Dubbing and voiceover',
-    description:
-      '     Looking to reach a broader audience with your multimedia projects? Add a Spanish-speaking voice!',
-  },
+  // {
+  //   name: 'Dubbing and voiceover',
+  //   description:
+  //     '     Looking to reach a broader audience with your multimedia projects? Add a Spanish-speaking voice!',
+  // },
   {
     name: 'Content creation and editing',
     description:
@@ -39,7 +39,7 @@ const services: serviceType[] = [
       {
         services.map((service, index) => (
           <div
-            class="hover:text-accent-500/80 dark:hover:text-accent-400/80 rounded-3xl px-4 transition"
+            class="rounded-3xl px-4 transition hover:text-accent-500/80 dark:hover:text-accent-400/80"
             x-data={`{ id: ${index}, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }`}
             x-bind:class="{ 'bg-accent-500/20 dark:bg-accent-400/20': isOpen }"
           >
