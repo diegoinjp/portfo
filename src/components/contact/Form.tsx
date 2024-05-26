@@ -17,7 +17,13 @@ export default function Form() {
   }
 
   return (
-    <form onSubmit={(e) => submit(e)} class="mt-3 flex flex-col gap-y-6">
+    <form
+      onSubmit={(e) => submit(e)}
+      class="mt-3 flex flex-col gap-y-6"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+    >
       <div>
         <label for="full-name" class="sr-only">
           Full name
